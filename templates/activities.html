@@ -15,139 +15,112 @@
         body {
             margin: 0;
             font-family: "Noto Sans TC", Arial, sans-serif;
-            background: #f5f7fa;
+            background: #f4f7f6;
             color: #333;
         }
 
         header {
-            background: linear-gradient(135deg, #4CAF50, #2e8b57);
+            background: linear-gradient(135deg, #4CAF50, #26734d);
             color: white;
             text-align: center;
-            padding: 55px 20px;
+            padding: 60px 20px;
         }
 
         header h1 {
-            margin: 0 0 10px;
+            margin: 0;
             font-size: 42px;
         }
 
         header p {
-            margin: 0;
+            margin-top: 12px;
             font-size: 18px;
-            opacity: 0.9;
         }
 
         .container {
             max-width: 1100px;
-            margin: 40px auto;
+            margin: 45px auto;
             padding: 0 20px;
         }
 
         .activity {
             background: white;
-            border-radius: 18px;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
             display: flex;
             flex-wrap: wrap;
         }
 
-        .activity-image {
+        .activity img {
             width: 45%;
-            min-height: 300px;
-            background-color: #e8ecef;
-        }
-
-        .activity-image img {
-            width: 100%;
-            height: 100%;
-            min-height: 300px;
+            height: 350px;
             object-fit: cover;
-            display: block;
         }
 
-        .activity-content {
+        .content {
             width: 55%;
-            padding: 35px;
+            padding: 40px;
         }
 
-        .activity-content h2 {
-            margin-top: 0;
+        .content h2 {
             color: #2e8b57;
-            font-size: 28px;
+            font-size: 30px;
+            margin-top: 0;
         }
 
-        .date {
-            color: #777;
-            font-size: 15px;
-            margin-bottom: 20px;
-        }
-
-        .activity-content p {
-            line-height: 1.9;
+        .content p {
             font-size: 17px;
+            line-height: 2;
         }
 
-        .skills {
-            margin-top: 20px;
-        }
-
-        .skills span {
+        .tag {
             display: inline-block;
             background: #e8f5e9;
-            color: #2e8b57;
-            padding: 8px 14px;
+            color: #26734d;
+            padding: 8px 15px;
+            margin: 5px;
             border-radius: 20px;
-            margin: 5px 5px 5px 0;
             font-size: 14px;
         }
 
-        .bottom {
+        .home {
             text-align: center;
             margin: 50px 0;
         }
 
-        .home-btn {
+        .home a {
             display: inline-block;
-            padding: 13px 28px;
+            padding: 13px 30px;
             background: #4CAF50;
             color: white;
             text-decoration: none;
-            border-radius: 25px;
-            transition: 0.3s;
+            border-radius: 30px;
         }
 
-        .home-btn:hover {
-            background: #2e8b57;
-            transform: translateY(-2px);
+        .home a:hover {
+            background: #26734d;
         }
 
         footer {
             text-align: center;
-            padding: 25px;
             background: #333;
             color: white;
-            font-size: 14px;
+            padding: 25px;
         }
 
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 32px;
-            }
-
-            .activity-image,
-            .activity-content {
+            .activity img,
+            .content {
                 width: 100%;
             }
 
-            .activity-image,
-            .activity-image img {
-                min-height: 220px;
+            .activity img {
+                height: 260px;
             }
 
-            .activity-content {
-                padding: 25px;
+            header h1 {
+                font-size: 32px;
             }
         }
     </style>
@@ -155,131 +128,121 @@
 
 <body>
 
-    <header>
-        <h1>我的課外活動</h1>
-        <p>課堂之外，探索興趣、累積經驗，也認識更好的自己</p>
-    </header>
+<header>
+    <h1>我的課外活動</h1>
+    <p>在課業之外，探索興趣並累積高中生活的經驗</p>
+</header>
 
-    <main class="container">
+<main class="container">
 
-        <!-- 活動一 -->
-        <div class="activity">
+    <!-- 籃球 -->
+    <div class="activity">
 
-            <div class="activity-image">
-                <img src="images/basketball.jpg" alt="籃球活動照片">
+        <img
+            src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1000&q=80"
+            alt="籃球活動照片"
+        >
+
+        <div class="content">
+            <h2>🏀 籃球活動</h2>
+
+            <p>
+                高中生活中，我有參與籃球相關活動。
+                打籃球除了可以鍛鍊體能，也讓我有更多和同學合作的機會。
+            </p>
+
+            <p>
+                在練習和比賽的過程中，我學會和隊友溝通，
+                也了解到團隊合作的重要性。即使遇到失誤，
+                也要重新調整自己的狀態，繼續完成比賽。
+            </p>
+
+            <div>
+                <span class="tag">團隊合作</span>
+                <span class="tag">溝通</span>
+                <span class="tag">運動</span>
+                <span class="tag">堅持</span>
             </div>
-
-            <div class="activity-content">
-                <h2>🏀 籃球活動</h2>
-
-                <div class="date">
-                    參與時間：高中期間
-                </div>
-
-                <p>
-                    高中期間，我有參與籃球相關活動。透過平常的練習與比賽，
-                    不只是提升自己的運動能力，也讓我學會如何和隊友溝通與合作。
-                </p>
-
-                <p>
-                    在比賽過程中，有時候即使遇到落後或失誤，也需要保持冷靜，
-                    和隊友一起想辦法解決問題。這段經驗讓我了解到團隊合作與堅持的重要性。
-                </p>
-
-                <div class="skills">
-                    <span>團隊合作</span>
-                    <span>溝通能力</span>
-                    <span>抗壓能力</span>
-                    <span>運動精神</span>
-                </div>
-            </div>
-
         </div>
 
+    </div>
 
-        <!-- 活動二 -->
-        <div class="activity">
 
-            <div class="activity-image">
-                <img src="images/activity.jpg" alt="課外活動照片">
+    <!-- 校園活動 -->
+    <div class="activity">
+
+        <img
+            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1000&q=80"
+            alt="校園活動照片"
+        >
+
+        <div class="content">
+            <h2>🎓 校園活動</h2>
+
+            <p>
+                高中期間，我也參與學校不同的活動。
+                這些經驗讓我的高中生活不只有課業，也能和同學一起完成不同的事情。
+            </p>
+
+            <p>
+                透過參與活動，我學習到如何和不同的人相處，
+                也培養了自己的責任感與合作能力。
+            </p>
+
+            <div>
+                <span class="tag">校園生活</span>
+                <span class="tag">合作</span>
+                <span class="tag">責任感</span>
             </div>
-
-            <div class="activity-content">
-                <h2>🎯 校內課外活動</h2>
-
-                <div class="date">
-                    參與時間：高中期間
-                </div>
-
-                <p>
-                    除了課業之外，我也會參與學校舉辦的課外活動。
-                    在不同活動中，我有機會和不同的同學一起完成任務，
-                    也能接觸到平常課堂比較少遇到的事情。
-                </p>
-
-                <p>
-                    這些活動讓我的高中生活不只有課業，也累積了許多與人相處、
-                    解決問題以及完成任務的經驗。
-                </p>
-
-                <div class="skills">
-                    <span>人際溝通</span>
-                    <span>責任感</span>
-                    <span>問題解決</span>
-                    <span>合作能力</span>
-                </div>
-            </div>
-
         </div>
 
+    </div>
 
-        <!-- 活動三 -->
-        <div class="activity">
 
-            <div class="activity-image">
-                <img src="images/club.jpg" alt="社團活動照片">
+    <!-- 社團 -->
+    <div class="activity">
+
+        <img
+            src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1000&q=80"
+            alt="學生社團活動照片"
+        >
+
+        <div class="content">
+            <h2>👥 社團活動</h2>
+
+            <p>
+                社團活動是高中生活中除了課業以外的重要經驗。
+                和有相同興趣的同學一起參與活動，
+                讓我有機會接觸不同的事物。
+            </p>
+
+            <p>
+                在團體活動中，我也學習到如何分工合作，
+                並且在需要的時候主動完成自己的工作。
+            </p>
+
+            <div>
+                <span class="tag">興趣</span>
+                <span class="tag">人際互動</span>
+                <span class="tag">自主學習</span>
             </div>
-
-            <div class="activity-content">
-                <h2>🎵 社團活動</h2>
-
-                <div class="date">
-                    參與時間：高中期間
-                </div>
-
-                <p>
-                    在高中生活中，我也參與過社團活動。
-                    社團提供了課業以外的學習機會，讓我可以接觸自己有興趣的事物，
-                    並且和有相同興趣的同學一起交流。
-                </p>
-
-                <p>
-                    透過社團活動，我學到除了完成自己的事情之外，
-                    也要顧慮團體的進度，並且在需要的時候主動協助其他人。
-                </p>
-
-                <div class="skills">
-                    <span>興趣培養</span>
-                    <span>團隊合作</span>
-                    <span>責任感</span>
-                    <span>自主學習</span>
-                </div>
-            </div>
-
         </div>
 
+    </div>
 
-        <div class="bottom">
-            <a href="index.html" class="home-btn">← 回到首頁</a>
-        </div>
 
-    </main>
+    <div class="home">
+        <a href="index.html">← 回到首頁</a>
+    </div>
 
-    <footer>
-        © 2026 我的高中生活｜課外活動
-    </footer>
+</main>
+
+<footer>
+    © 2026 我的高中生活
+</footer>
 
 </body>
 </html>
 ```
+
 
