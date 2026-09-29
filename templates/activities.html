@@ -4,241 +4,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>課外活動｜我的高中生活</title>
+    <title>課外活動</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
-            margin: 0;
-            font-family: "Noto Sans TC", Arial, sans-serif;
-            background: #f4f7f6;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             color: #333;
+            margin: 0;
         }
 
         header {
-            background: linear-gradient(135deg, #4CAF50, #26734d);
+            background-color: #4CAF50;
             color: white;
+            padding: 20px;
             text-align: center;
-            padding: 60px 20px;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 42px;
+        section {
+            margin: 20px auto;
+            max-width: 1000px;
         }
 
-        header p {
-            margin-top: 12px;
-            font-size: 18px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 45px auto;
-            padding: 0 20px;
-        }
-
-        .activity {
-            background: white;
-            margin-bottom: 40px;
-            border-radius: 20px;
+        .activity-box {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-            display: flex;
-            flex-wrap: wrap;
         }
 
-        .activity img {
-            width: 45%;
-            height: 350px;
+        .activity-box img {
+            width: 100%;
+            height: 260px;
             object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
 
-        .content {
-            width: 55%;
-            padding: 40px;
+        .activity-box h2 {
+            color: #4CAF50;
+            margin-top: 5px;
         }
 
-        .content h2 {
-            color: #2e8b57;
-            font-size: 30px;
-            margin-top: 0;
+        .activity-box p {
+            line-height: 1.8;
+            font-size: 16px;
         }
 
-        .content p {
-            font-size: 17px;
-            line-height: 2;
+        .form-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
         }
 
-        .tag {
-            display: inline-block;
-            background: #e8f5e9;
-            color: #26734d;
-            padding: 8px 15px;
-            margin: 5px;
-            border-radius: 20px;
-            font-size: 14px;
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
         }
 
-        .home {
-            text-align: center;
-            margin: 50px 0;
+        input[type="submit"],
+        input[type="button"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
         }
 
-        .home a {
-            display: inline-block;
-            padding: 13px 30px;
-            background: #4CAF50;
+        input[type="submit"] {
+            background-color: #4CAF50;
             color: white;
-            text-decoration: none;
-            border-radius: 30px;
         }
 
-        .home a:hover {
-            background: #26734d;
-        }
-
-        footer {
-            text-align: center;
-            background: #333;
+        input[type="button"] {
+            background-color: #777;
             color: white;
-            padding: 25px;
         }
 
-        @media (max-width: 768px) {
-            .activity img,
-            .content {
-                width: 100%;
-            }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
 
-            .activity img {
-                height: 260px;
-            }
-
-            header h1 {
-                font-size: 32px;
-            }
+        input[type="button"]:hover {
+            background-color: #555;
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>我的課外活動</h1>
-    <p>在課業之外，探索興趣並累積高中生活的經驗</p>
-</header>
+    <header>
+        <h1>課外活動</h1>
+        <p>我的高中課外生活與興趣</p>
+    </header>
 
-<main class="container">
+    <section>
 
-    <!-- 活動一：籃球 -->
-    <div class="activity">
+        <!-- 籃球 -->
+        <div class="activity-box">
+            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1200&q=80"
+                 alt="籃球活動">
 
-        <img
-            src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1000&q=80"
-            alt="籃球活動照片"
-        >
-
-        <div class="content">
-            <h2>🏀 籃球活動</h2>
+            <h2>🏀 籃球</h2>
 
             <p>
-                高中生活中，我有參與籃球相關活動。
-                打籃球除了可以鍛鍊體能，也讓我有更多和同學合作的機會。
+                籃球是我平常很喜歡的課外活動之一。
+                在打籃球的過程中，不只是鍛鍊體力，也需要和隊友互相配合。
+                每一次比賽都讓我學習如何溝通、合作，以及在遇到困難時保持專注。
             </p>
 
             <p>
-                在練習和比賽的過程中，我學會和隊友溝通，
-                也了解到團隊合作的重要性。即使遇到失誤，
-                也要重新調整自己的狀態，繼續完成比賽。
+                對我來說，打籃球也是課業之外放鬆自己的方式。
+                和朋友一起運動的過程中，可以留下很多高中生活的回憶。
             </p>
-
-            <span class="tag">團隊合作</span>
-            <span class="tag">溝通</span>
-            <span class="tag">運動</span>
-            <span class="tag">堅持</span>
         </div>
 
-    </div>
 
+        <!-- 音樂 -->
+        <div class="activity-box">
+            <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1200&q=80"
+                 alt="音樂活動">
 
-    <!-- 活動二：校園活動 -->
-    <div class="activity">
-
-        <img
-            src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1000&q=80"
-            alt="校園活動照片"
-        >
-
-        <div class="content">
-            <h2>🎓 校園活動</h2>
+            <h2>🎵 音樂</h2>
 
             <p>
-                高中期間，我也參與學校不同的活動。
-                這些經驗讓我的高中生活不只有課業，
-                也能和同學一起完成不同的事情。
+                平常我也喜歡接觸音樂，會利用空閒時間聽不同類型的歌曲。
+                音樂可以讓我在讀書或忙碌了一整天之後放鬆心情。
             </p>
 
             <p>
-                透過參與活動，我學習到如何和不同的人相處，
-                也培養了自己的責任感與合作能力。
+                我也對唱歌有興趣，會注意不同歌手的唱法與聲音表現。
+                透過接觸音樂，我也慢慢找到自己喜歡的歌曲類型。
             </p>
-
-            <span class="tag">校園生活</span>
-            <span class="tag">合作</span>
-            <span class="tag">責任感</span>
         </div>
 
-    </div>
 
+        <!-- 社團 -->
+        <div class="activity-box">
+            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80"
+                 alt="社團與團體活動">
 
-    <!-- 活動三：社團 -->
-    <div class="activity">
-
-        <img
-            src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1000&q=80"
-            alt="社團活動照片"
-        >
-
-        <div class="content">
             <h2>👥 社團活動</h2>
 
             <p>
-                社團活動是高中生活中除了課業以外的重要經驗。
-                和有相同興趣的同學一起參與活動，
-                讓我有機會接觸不同的事物。
+                高中生活中，社團活動也是很重要的一部分。
+                和同學一起參與活動，需要進行分工與討論，
+                也讓我有更多機會認識不同個性的同學。
             </p>
 
             <p>
-                在團體活動中，我也學習到如何分工合作，
-                並且在需要的時候主動完成自己的工作。
+                在團體合作的過程中，我學會聽取別人的意見，
+                也更了解團隊合作的重要性。
             </p>
-
-            <span class="tag">興趣</span>
-            <span class="tag">人際互動</span>
-            <span class="tag">自主學習</span>
         </div>
 
-    </div>
+
+        <!-- 校園活動 -->
+        <div class="activity-box">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80"
+                 alt="校園活動">
+
+            <h2>🎤 校園活動</h2>
+
+            <p>
+                除了平常的課程之外，我也會參與學校舉辦的活動。
+                這些活動讓高中生活更加豐富，也留下許多與同學相處的回憶。
+            </p>
+
+            <p>
+                我希望在高中最後的這段時間裡，
+                能夠繼續參加不同的活動，嘗試新的事物，
+                讓自己的高中生活更加充實。
+            </p>
+        </div>
 
 
-    <div class="home">
-        <a href="index.html">← 回到首頁</a>
-    </div>
+        <!-- 原本的提問功能 -->
+        <div class="form-box">
+            <form action="/activities" method="post">
 
-</main>
+                <label for="question">你的問題:</label><br>
+                <input type="text"
+                       id="question"
+                       name="question"
+                       value="{{ question }}"><br><br>
 
-<footer>
-    © 2026 我的高中生活
-</footer>
+                <label for="answer">答案:</label><br>
+                <input type="text"
+                       id="answer"
+                       name="answer"
+                       readonly
+                       value="{{ answer }}"><br><br>
+
+                <input type="submit" value="送出">
+                <input type="button"
+                       value="回首頁"
+                       onclick="window.location.href='/'">
+
+            </form>
+        </div>
+
+    </section>
 
 </body>
 </html>
 ```
+
 
 
 
