@@ -1,47 +1,285 @@
+```html
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ask a Question</title>
+
+    <title>課外活動｜我的高中生活</title>
+
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            margin: 0;
+            font-family: "Noto Sans TC", Arial, sans-serif;
+            background: #f5f7fa;
             color: #333;
         }
+
         header {
-            background-color: #4CAF50;
+            background: linear-gradient(135deg, #4CAF50, #2e8b57);
             color: white;
-            padding: 10px;
             text-align: center;
+            padding: 55px 20px;
         }
-        section {
-            margin: 20px;
+
+        header h1 {
+            margin: 0 0 10px;
+            font-size: 42px;
         }
-        .form-box {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+        header p {
+            margin: 0;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .activity {
+            background: white;
+            border-radius: 18px;
+            margin-bottom: 35px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .activity-image {
+            width: 45%;
+            min-height: 300px;
+            background-color: #e8ecef;
+        }
+
+        .activity-image img {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .activity-content {
+            width: 55%;
+            padding: 35px;
+        }
+
+        .activity-content h2 {
+            margin-top: 0;
+            color: #2e8b57;
+            font-size: 28px;
+        }
+
+        .date {
+            color: #777;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .activity-content p {
+            line-height: 1.9;
+            font-size: 17px;
+        }
+
+        .skills {
+            margin-top: 20px;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e8b57;
+            padding: 8px 14px;
+            border-radius: 20px;
+            margin: 5px 5px 5px 0;
+            font-size: 14px;
+        }
+
+        .bottom {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .home-btn {
+            display: inline-block;
+            padding: 13px 28px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            background: #2e8b57;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #333;
+            color: white;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 32px;
+            }
+
+            .activity-image,
+            .activity-content {
+                width: 100%;
+            }
+
+            .activity-image,
+            .activity-image img {
+                min-height: 220px;
+            }
+
+            .activity-content {
+                padding: 25px;
+            }
         }
     </style>
 </head>
+
 <body>
+
     <header>
-        <h1>課外活動</h1>
+        <h1>我的課外活動</h1>
+        <p>課堂之外，探索興趣、累積經驗，也認識更好的自己</p>
     </header>
-    <section>
-        <div class="form-box">
-            <form action="/activities" method="post">
-                <label for="question">你的問題:</label><br>
-                <input type="text" id="question" name="question" value="{{ question }}"><br><br>
-                <label for="answer">答案:</label><br>
-                <input type="text" id="answer" name="answer" readonly value="{{ answer }}"><br><br>
-                <input type="submit" value="送出">
-                <input type="button" value="回首頁" onclick="window.location.href='/'">
-            </form>
+
+    <main class="container">
+
+        <!-- 活動一 -->
+        <div class="activity">
+
+            <div class="activity-image">
+                <img src="images/basketball.jpg" alt="籃球活動照片">
+            </div>
+
+            <div class="activity-content">
+                <h2>🏀 籃球活動</h2>
+
+                <div class="date">
+                    參與時間：高中期間
+                </div>
+
+                <p>
+                    高中期間，我有參與籃球相關活動。透過平常的練習與比賽，
+                    不只是提升自己的運動能力，也讓我學會如何和隊友溝通與合作。
+                </p>
+
+                <p>
+                    在比賽過程中，有時候即使遇到落後或失誤，也需要保持冷靜，
+                    和隊友一起想辦法解決問題。這段經驗讓我了解到團隊合作與堅持的重要性。
+                </p>
+
+                <div class="skills">
+                    <span>團隊合作</span>
+                    <span>溝通能力</span>
+                    <span>抗壓能力</span>
+                    <span>運動精神</span>
+                </div>
+            </div>
+
         </div>
-    </section>
+
+
+        <!-- 活動二 -->
+        <div class="activity">
+
+            <div class="activity-image">
+                <img src="images/activity.jpg" alt="課外活動照片">
+            </div>
+
+            <div class="activity-content">
+                <h2>🎯 校內課外活動</h2>
+
+                <div class="date">
+                    參與時間：高中期間
+                </div>
+
+                <p>
+                    除了課業之外，我也會參與學校舉辦的課外活動。
+                    在不同活動中，我有機會和不同的同學一起完成任務，
+                    也能接觸到平常課堂比較少遇到的事情。
+                </p>
+
+                <p>
+                    這些活動讓我的高中生活不只有課業，也累積了許多與人相處、
+                    解決問題以及完成任務的經驗。
+                </p>
+
+                <div class="skills">
+                    <span>人際溝通</span>
+                    <span>責任感</span>
+                    <span>問題解決</span>
+                    <span>合作能力</span>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- 活動三 -->
+        <div class="activity">
+
+            <div class="activity-image">
+                <img src="images/club.jpg" alt="社團活動照片">
+            </div>
+
+            <div class="activity-content">
+                <h2>🎵 社團活動</h2>
+
+                <div class="date">
+                    參與時間：高中期間
+                </div>
+
+                <p>
+                    在高中生活中，我也參與過社團活動。
+                    社團提供了課業以外的學習機會，讓我可以接觸自己有興趣的事物，
+                    並且和有相同興趣的同學一起交流。
+                </p>
+
+                <p>
+                    透過社團活動，我學到除了完成自己的事情之外，
+                    也要顧慮團體的進度，並且在需要的時候主動協助其他人。
+                </p>
+
+                <div class="skills">
+                    <span>興趣培養</span>
+                    <span>團隊合作</span>
+                    <span>責任感</span>
+                    <span>自主學習</span>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="bottom">
+            <a href="index.html" class="home-btn">← 回到首頁</a>
+        </div>
+
+    </main>
+
+    <footer>
+        © 2026 我的高中生活｜課外活動
+    </footer>
+
 </body>
 </html>
+```
+
