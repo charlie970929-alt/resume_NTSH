@@ -101,58 +101,7 @@ language="ko"
 )
 
 
-# 課外活動
-@app.route('/activities', methods=['GET', 'POST'])
-def activities():
-if request.method == 'POST':
-question = request.form.get('question', '').strip()
 
-answer1 = "抱歉，我目前沒有這個詞的韓文對應。"
-
-return render_template(
-'activities.html',
-question=question,
-answer=answer1
-)
-
-return render_template('activities.html', question="", answer="")
-
-
-# 股票查詢
-@app.route('/stock', methods=['GET', 'POST'])
-def stock():
-if request.method == 'POST':
-question = request.form.get('question', '').strip()
-
-if not question:
-answer = "請輸入股票代號，例如 2330。"
-else:
-url = (
-"https://www.twse.com.tw/exchangeReport/"
-f"STOCK_DAY?response=json&stockNo={question}"
-)
-
-try:
-res = requests.get(url, timeout=10)
-res.raise_for_status()
-data = res.json()
-
-if data.get("stat") == "OK" and data.get("data"):
-answer = data["data"][-1][6]
-answer = f"最近交易日收盤價：{answer} 元"
-else:
-answer = "查無資料，請確認股票代號或日期。"
-
-except requests.RequestException:
-answer = "目前無法連接股價查詢服務，請稍後再試。"
-except (ValueError, KeyError, IndexError):
-answer = "資料格式異常，請稍後再試。"
-
-return render_template(
-'stock.html',
-question=question,
-answer=answer
-)
 
 return render_template('stock.html', question="", answer="")
 
